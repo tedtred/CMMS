@@ -25,5 +25,4 @@
   "forwardPorts": [3000, 8000, 3306],
   "remoteUser": "vscode",
   "overrideCommand": true,
-  "initializeCommand": "sudo apt-get update && sudo apt-get install -y phpmyadmin apache2 php libache2mod-php && sudo service apache2 start"
-}
+  "initializeCommand": "sudo apt-get update && sudo apt-get install -y phpmyadmin apache2 php libache2mod-php && sudo a2enmod php && sudo service apache2 start"}
