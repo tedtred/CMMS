@@ -1,0 +1,29 @@
+{
+  "name": "CMMS Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.9"
+    },
+    "ghcr.io/devcontainers/features/mariadb:1": {
+      "version": "10.6"
+    }
+  },
+  "customizations": {
+    "vcode": {
+      "extensions": [
+        "dbaeumer.vscode.eslint",
+        "ms-python.python",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install && pip install -r requirements.txt",
+  "forwardPorts": [3000, 8000, 3306],
+  "remoteUser": "vscode",
+  "overrideCommand": true,
+  "initializeCommand": "sudo apt-get update && sudo apt-get install -y phpmyadmin"
+}
