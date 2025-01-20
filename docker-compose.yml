@@ -5,10 +5,10 @@ services:
     container_name: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: cdbs
-      MYSQL_USER: cdbuser
-      MYSQL_PASSWORD: cdbpassword
+      MYSQL_ROOT_PASSWORD: "rootpassword"
+      MYSQL_DATABASE: "cdbs"
+      MYSQL_USER: "cdbuser"
+      MYSQL_PASSWORD: "cdbpassword"
     ports:
       - "3306:3306"
     volumes:
@@ -19,13 +19,13 @@ services:
     container_name: phpmyadmin
     restart: always
     environment:
-      PMA_HOSS: db
+      PMA_HOST: db
       PMA_PORT: 3306
     ports:
       - "8080:80"
     depends_on:
       - db
 
-  volumes:
-    db_data:
-      driver: true
+volumes:
+  db_data:
+    driver: local
