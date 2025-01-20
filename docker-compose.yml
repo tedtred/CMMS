@@ -1,14 +1,13 @@
-version: '3.8'
 services:
   db:
     image: mariadb:10.6
     container_name: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: "rootpassword"
-      MYSQL_DATABASE: "cdbs"
-      MYSQL_USER: "cdbuser"
-      MYSQL_PASSWORD: "cdbpassword"
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: cmms
+      MYSQL_USER: cmmsuser
+      MYSQL_PASSWORD: cmmsuserpassword
     ports:
       - "3306:3306"
     volumes:
