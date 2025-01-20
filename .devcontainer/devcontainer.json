@@ -13,9 +13,9 @@
     }
   },
   "customizations": {
-    "vcode": {
+    "vscode": {
       "extensions": [
-        "dbaeumer.vscode.eslint",
+        "dbaeumer.vscode-eslint",
         "ms-python.python",
         "esbenp.prettier-vscode"
       ]
@@ -25,4 +25,5 @@
   "forwardPorts": [3000, 8000, 3306],
   "remoteUser": "vscode",
   "overrideCommand": true,
-  "initializeCommand": "echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/dbconfig-install boolean true' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/app-password-confirm password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/mysql/admin-pass password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/mysql/app-pass password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/password-confirm password admin' | sudo debconf-set-selections && sudo apt-get update && sudo apt-get install -y phpmyadmin apache2 php libapache2-mod-php && echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf && sudo a2enmod php && sudo service apache2 start"}
+  "initializeCommand": "echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/dbconfig-install boolean true' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/app-password-confirm password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/mysql/admin-pass password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/mysql/app-pass password admin' | sudo debconf-set-selections && echo 'phpmyadmin phpmyadmin/password-confirm password admin' | sudo debconf-set-selections && sudo apt-get update && sudo apt-get install -y phpmyadmin apache2 php libapache2-mod-php && echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf && sudo a2enmod php && sudo service apache2 start"
+}
