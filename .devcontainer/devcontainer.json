@@ -18,7 +18,7 @@
       ]
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ca-certificates curl docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && sudo service docker start && sudo usermod -aG docker vscode && newgrp docker && docker-compose up -d",
+  "postCreateCommand":"",
   "forwardPorts": [8080, 3306],
   "remoteUser": "vscode"
 }
