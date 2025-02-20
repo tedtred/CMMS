@@ -1,19 +1,18 @@
-const Sequelize=require('sequelize');
+// Example for a Sequelize connection configuration:
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('cmms','root','mysql',{
-    host:'localhost',
-    dialect:'mysql'
-   
-  });
+const dbConfig = {
+  host: process.env.DB_HOST || 'db', // Use 'db' (the service name) by default
+  username: process.env.DB_USER || 'cmms_user',
+  password: process.env.DB_PASSWORD || 'secret',
+  database: process.env.DB_NAME || 'cmms',
+  dialect: 'mysql'
+};
 
+const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
+  host: dbConfig.host,
+  dialect: dbConfig.dialect,
+  // ... other options
+});
 
-  sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.');
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  })
-
-module.exports = sequelize;  
+module.exports = sequelize;
