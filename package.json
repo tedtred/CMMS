@@ -26,10 +26,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remonalbear/CMMS.git"
+    "url": "git+https://github.com/tedtred/CMMS.git"
   },
   "bugs": {
-    "url": "https://github.com/remonalbear/CMMS/issues"
+    "url": "https://github.com/tedtred/CMMS/issues"
   },
-  "homepage": "https://github.com/remonalbear/CMMS#readme"
+  "homepage": "https://github.com/tedtred/CMMS#readme"
 }
