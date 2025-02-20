@@ -3,23 +3,74 @@
 <head>
     <title>Login</title>
     <style>
-        body, html { background-color: #f6f6f6; display: flex; justify-content: center; align-items: center; font-family: Arial, sans-serif; }
-        .container { background-color: #fff; width: 300px; padding: 20px; border-radius: 5px; shadow: 0 0 10px rgba(0,0,0,0.2); }
-        label, input { display: block; width: 100%; margin-bottom: 10px; font-size: 16px; }
-        button { width: 100%; padding: 10px; background-color: #008C; color: #fff; border: none; cursor: pointer; font-size: 18px; }
-        button.submit { background-color: #006060; }
-    </style>
+        *  {
+            font-family: "Arial, Sans-Serif", system: sans-serif;
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 300px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label, input {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        body input:focus {
+            outline: none;
+            border-color: #400;
+        }
+        body input:focus+parent {
+            border-color: #500;
+        }
+        button {
+            padding: 10px;
+            background: #288fff;
+            color: white;
+            border: none;
+            font-size: 18px;
+            width: 100%;
+            cursor: pointer;
+            height: 30px;
+        }
+        body button:hever {
+            background: #188aff;
+        }
+      </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>Login</h2>
+    <div class="login-container">
+        <h2>System Login</h2>
         <form action="#" method="post">
-            <label>Email or Username</label>
+            <label>Username or Email</label>
             <input type="text" name="username" required>
             <label>Password</label>
             <input type="password" name="password" required>
-            <button type="submit" class="submit">Login</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
